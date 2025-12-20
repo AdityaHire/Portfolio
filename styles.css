@@ -23,7 +23,8 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: var(--text-color);
-    background: var(--bg-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+    background-attachment: fixed;
     line-height: 1.7;
     letter-spacing: -0.01em;
     font-weight: 400;

@@ -42,6 +42,23 @@ window.addEventListener('load', () => {
     setTimeout(typeWriter, 500);
 });
 
+// Dynamic gradient background for entire page
+let hue = 0;
+const body = document.body;
+
+function animateBackground() {
+    hue = (hue + 0.3) % 360;
+    const lightness = 97 + Math.sin(Date.now() / 3000) * 1.5;
+    body.style.background = `linear-gradient(135deg, 
+        hsl(${hue}, 15%, ${lightness}%) 0%, 
+        hsl(${(hue + 40) % 360}, 20%, ${lightness - 1}%) 50%,
+        hsl(${(hue + 80) % 360}, 15%, ${lightness - 2}%) 100%)`;
+    requestAnimationFrame(animateBackground);
+}
+
+// Start background animation
+animateBackground();
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
